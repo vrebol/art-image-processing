@@ -1,0 +1,15 @@
+Različni načini plottanja podatkov:
+brightness mean-saturation mean
+pca v dveh dimenzijah
+
+primitivni vidik - barve(ton, nasičenost, svetlost, temperatura), palete
+
+kompozicija - razporeditev (linije, oblike, postavitev)
+
++ ostrina predmetov(edge detection)
+
+kontekstualni vidik - AI object recognition(predmeti), osvetlitev---gledaš če se obrazi smejejo ali ne
+
+Vse skupaj združimo v vizualizacijo
+heatmap
+mora zgledat vredu

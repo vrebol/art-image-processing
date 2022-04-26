@@ -1,0 +1,28 @@
+impressionism
+pissarro 889
+monet    1366
+morisot  241
+2496
+
+
+post impressionism
+van gogh 1931
+cezanne 587	
+gauguin 516
+3034
+
+realism
+corot 502
+courbet 289
+millet 129
+daumier 255
+1175
++?
+
+expressionism
+munch     193
+kirchner  391
+soutine   119
+703
+
+
