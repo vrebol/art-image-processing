@@ -47,6 +47,20 @@ def retrievestyle(path,style):
     return retrieveimagesfromid(ids)
     pass
 
+def retrievestyle1(path,style):
+    ids = []
+    for filename in os.listdir(path):
+        if filename != "artists.json":
+            newpath = path + "/" + filename
+            file = open(newpath, encoding='utf-8')
+            data = json.load(file)
+            for i in data:
+                if i["style"] == style:
+                    ids.append(i["contentId"])
+            file.close()
+    return ids
+    pass
+
 def retrieveauthorstyle(path,style):
     ### probably wont be needed
     pass
@@ -66,9 +80,23 @@ def retrieve(style, author):
         return retrieveauthorstyle(path,style)
     pass
 
+def retrievestyleIds():
+    path = "wikiart-saved/meta/"
+    ids1 = retrievestyle1(path,"Realism")
+    ids2 = retrievestyle1(path,"Impressionism")
+    ids3 = retrievestyle1(path,"Expressionism")
+    ids4 = retrievestyle1(path,"Post-Impressionism")
+    dict = {}
+    dict["Realism"] = ids1
+    dict["Impressionism"] = ids2
+    dict["Expressionism"] = ids3
+    dict["Post-Impressionism"] = ids4
+    return dict
+    pass
+
 
 if __name__ == "__main__":
-    b = retrieve("Post-Impressionism",None)
+    b = retrieve("Expressionism",None)
     print(len(b))
     plt.imshow(b[0])
     plt.show()
