@@ -4,6 +4,21 @@ from matplotlib import pyplot as plt
 import os
 import json
 
+def readFromDir(name):
+    path = name
+    images = []
+    j=0
+    for image in os.listdir(path):
+        print(j)
+        newpath = path + "/" + image
+        I = cv2.imread(newpath)
+        I = cv2.cvtColor(I, cv2.COLOR_BGR2RGB)
+        images.append(I)
+        j+=1
+
+    return images
+    pass
+
 def retrieveimagesfromid(ids):
     path = "wikiart-saved/images/"
     images = []
