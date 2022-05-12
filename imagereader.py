@@ -4,7 +4,7 @@ from matplotlib import pyplot as plt
 import os
 import json
 
-def readFromDir(name):
+def readfromdir(name):
     path = name
     images = []
     j=0
@@ -15,6 +15,8 @@ def readFromDir(name):
         I = cv2.cvtColor(I, cv2.COLOR_BGR2RGB)
         images.append(I)
         j+=1
+        """ if j == 100:
+            break """
 
     return images
     pass
@@ -93,9 +95,8 @@ def retrieve(style, author):
     else:
         path = "wikiart-saved/meta/" + author
         return retrieveauthorstyle(path,style)
-    pass
 
-def retrievestyleIds():
+def retrievestyleids():
     path = "wikiart-saved/meta/"
     ids1 = retrievestyle1(path,"Realism")
     ids2 = retrievestyle1(path,"Impressionism")
